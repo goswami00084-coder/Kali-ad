@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyber-dark: #0a0a0a;
+  --cyber-medium: #1a1a1a;
+  --cyber-green: #00ff41;
+  --cyber-bright: #00ffff;
+  --cyber-cyan: #40e0d0;
+  --cyber-yellow: #ffff00;
+  --cyber-black: #000000;
+}
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(180 6.6667% 97.0588%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(203.8863 88.2845% 53.1373%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 25% 7.8431%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(240 1.9608% 90%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(211.5789 51.3514% 92.7451%);
+  --accent-foreground: hsl(203.8863 88.2845% 53.1373%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(201.4286 30.4348% 90.9804%);
+  --input: hsl(200 23.0769% 97.4510%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+  --chart-1: hsl(203.8863 88.2845% 53.1373%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(180 6.6667% 97.0588%);
+  --sidebar-foreground: hsl(210 25% 7.8431%);
+  --sidebar-primary: hsl(203.8863 88.2845% 53.1373%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(211.5789 51.3514% 92.7451%);
+  --sidebar-accent-foreground: hsl(203.8863 88.2845% 53.1373%);
+  --sidebar-border: hsl(205.0000 25.0000% 90.5882%);
+  --sidebar-ring: hsl(202.8169 89.1213% 53.1373%);
+  --font-sans: Open Sans, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Fira Code', Consolas, monospace;
+  --radius: 1.3rem;
+  
+  /* CyberTerminal Colors */
+  --cyber-black: hsl(220 14.3% 4.1%);
+  --cyber-dark: hsl(223 47.4% 8.8%);
+  --cyber-medium: hsl(215 27.9% 16.9%);
+  --cyber-light: hsl(217 32.6% 21.6%);
+  --cyber-green: hsl(120 100% 50%);
+  --cyber-bright: hsl(98 100% 50%);
+  --cyber-red: hsl(0 73% 66%);
+  --cyber-cyan: hsl(180 50% 60%);
+  --cyber-yellow: hsl(60 100% 66%);
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(200 6.6667% 91.1765%);
+  --card: hsl(228 9.8039% 10%);
+  --card-foreground: hsl(0 0% 85.0980%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(200 6.6667% 91.1765%);
+  --primary: hsl(203.7736 87.6033% 52.5490%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(195.0000 15.3846% 94.9020%);
+  --secondary-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(0 0% 9.4118%);
+  --muted-foreground: hsl(210 3.3898% 46.2745%);
+  --accent: hsl(205.7143 70% 7.8431%);
+  --accent-foreground: hsl(203.7736 87.6033% 52.5490%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(210 5.2632% 14.9020%);
+  --input: hsl(207.6923 27.6596% 18.4314%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+  --chart-1: hsl(203.8863 88.2845% 53.1373%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(228 9.8039% 10%);
+  --sidebar-foreground: hsl(0 0% 85.0980%);
+  --sidebar-primary: hsl(202.8169 89.1213% 53.1373%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(205.7143 70% 7.8431%);
+  --sidebar-accent-foreground: hsl(203.7736 87.6033% 52.5490%);
+  --sidebar-border: hsl(205.7143 15.7895% 26.0784%);
+  --sidebar-ring: hsl(202.8169 89.1213% 53.1373%);
+  --font-sans: Open Sans, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Fira Code', Consolas, monospace;
+  --radius: 1.3rem;
+}
+
+@keyframes pulse-green {
+  0%, 100% { 
+    opacity: 1; 
+  }
+  50% { 
+    opacity: 0.5; 
+  }
+}
+
+@keyframes blink {
+  0%, 50% { 
+    opacity: 1; 
+  }
+  51%, 100% { 
+    opacity: 0; 
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground overflow-hidden;
+  }
+}
+
+@layer components {
+  .terminal-cursor::after {
+    content: '█';
+    animation: blink 1s infinite;
+    color: var(--cyber-green);
+  }
+
+  .animate-pulse-green {
+    animation: pulse-green 2s infinite;
+  }
+
+  .bg-cyber-black {
+    background-color: var(--cyber-black);
+  }
+
+  .bg-cyber-dark {
+    background-color: var(--cyber-dark);
+  }
+
+  .bg-cyber-medium {
+    background-color: var(--cyber-medium);
+  }
+
+  .bg-cyber-light {
+    background-color: var(--cyber-light);
+  }
+
+  .bg-cyber-green {
+    background-color: var(--cyber-green);
+  }
+
+  .bg-cyber-bright {
+    background-color: var(--cyber-bright);
+  }
+
+  .bg-cyber-red {
+    background-color: var(--cyber-red);
+  }
+
+  .bg-cyber-cyan {
+    background-color: var(--cyber-cyan);
+  }
+
+  .bg-cyber-yellow {
+    background-color: var(--cyber-yellow);
+  }
+
+  .text-cyber-black {
+    color: var(--cyber-black);
+  }
+
+  .text-cyber-dark {
+    color: var(--cyber-dark);
+  }
+
+  .text-cyber-medium {
+    color: var(--cyber-medium);
+  }
+
+  .text-cyber-light {
+    color: var(--cyber-light);
+  }
+
+  .text-cyber-green {
+    color: var(--cyber-green);
+  }
+
+  .text-cyber-bright {
+    color: var(--cyber-bright);
+  }
+
+  .text-cyber-red {
+    color: var(--cyber-red);
+  }
+
+  .text-cyber-cyan {
+    color: var(--cyber-cyan);
+  }
+
+  .text-cyber-yellow {
+    color: var(--cyber-yellow);
+  }
+
+  .border-cyber-black {
+    border-color: var(--cyber-black);
+  }
+
+  .border-cyber-dark {
+    border-color: var(--cyber-dark);
+  }
+
+  .border-cyber-medium {
+    border-color: var(--cyber-medium);
+  }
+
+  .border-cyber-light {
+    border-color: var(--cyber-light);
+  }
+
+  .border-cyber-green {
+    border-color: var(--cyber-green);
+  }
+
+  .border-cyber-bright {
+    border-color: var(--cyber-bright);
+  }
+
+  .border-cyber-red {
+    border-color: var(--cyber-red);
+  }
+
+  .border-cyber-cyan {
+    border-color: var(--cyber-cyan);
+  }
+
+  .border-cyber-yellow {
+    border-color: var(--cyber-yellow);
+  }
+
+  .hover\:bg-cyber-medium:hover {
+    background-color: var(--cyber-medium);
+  }
+
+  .hover\:bg-cyber-light:hover {
+    background-color: var(--cyber-light);
+  }
+
+  .hover\:bg-cyber-bright:hover {
+    background-color: var(--cyber-bright);
+  }
+
+  .hover\:text-cyber-bright:hover {
+    color: var(--cyber-bright);
+  }
+
+  .focus\:border-cyber-green:focus {
+    border-color: var(--cyber-green);
+  }
+}
